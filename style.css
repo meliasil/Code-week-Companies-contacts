@@ -1,0 +1,76 @@
+body {
+    background-color: #20334d
+}
+
+
+.title-container {
+    background-color: #A4EBC2;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    color:#20334d;
+}
+
+
+.button-container {
+    background-color: #cd9341;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.button, .buttonAll {
+    margin: 20px;
+    padding: 20px;
+    background-color: antiquewhite;
+    color: #20334d;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #20334d;
+    
+}
+
+.button:hover,
+.buttonAll:hover {
+    color: #cd9341;
+    background-color: #20334d;
+    cursor: pointer;
+}
+
+.card {
+    padding: 50px;
+    border: 1px solid #20334d;
+    background-color: antiquewhite;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-El{
+
+    color:#20334d;
+    font-size: 30px;
+}
+
+.catch-Phrase {
+    color:#20334d;
+}
+
+p {
+    color:#20334d;
+}
+
+.contactForm {
+    display: none;
+}
