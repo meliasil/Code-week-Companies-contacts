@@ -25,15 +25,15 @@ export const users = 'https://jsonplaceholder.typicode.com/users';
 
             const catchPhraseEl = document.createElement('h3');
             catchPhraseEl.className = 'catch-Phrase';
-            catchPhraseEl.innerHTML = items.company.catchPhrase;
+            catchPhraseEl.innerHTML = `«${items.company.catchPhrase}»`;
 
 
             const addressEl = document.createElement('p');
-            addressEl.innerHTML = items.company.address;
+            addressEl.innerHTML = `street: ${items.address.street}, suite: ${items.address.suite}, city: ${items.address.city}`;
 
 
             const phoneEl = document.createElement('p');
-            phoneEl.innerHTML = items.company.phone;
+            phoneEl.innerHTML = `phone: ${items.phone}`;
 
 
             newCard.append(companyEl, catchPhraseEl, addressEl, phoneEl);
@@ -89,8 +89,6 @@ export const filterAE = () => {
 
                 console.log(companiesNames);
 
-                /* renderCard(companiesNames) */
-
 
             }
         })
@@ -117,7 +115,7 @@ export const filterFL = () => {
             if (startsWithLetter(companiesNames, firstLetter)) {
                 
                 console.log(companiesNames)
-            /* renderCard(companiesNames) */
+
             }
         })
     }
@@ -141,7 +139,7 @@ export const filterMZ = () => {
             if (startsWithLetter(companiesNames, firstLetter)) {
                 
                 console.log(companiesNames)
-                /* renderCard(companiesNames) */
+
             }
         })
     }
