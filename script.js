@@ -1,11 +1,11 @@
 
-import {users, renderCard, showCard, filterAE, filterFL, filterMZ /* showFormButton, submitNewContact */} from './functions';
+import {users, filterAll, filterAE, filterFL, filterMZ, showCard} from './api-calls.js';
 
 
 
 
 
-/* const titleContainer = document.querySelector('.title-container');
+const titleContainer = document.querySelector('.title-container');
 const title = document.createElement('h1');
 title.className = 'main-title';
 title.textContent = 'Contacts';
@@ -28,12 +28,12 @@ button2.textContent = 'F-L';
 button3.textContent = 'M-Z';
 buttonAll.textContent = 'ALL';
 
-buttonContainer.append(button1, button2, button3, buttonAll); */
+buttonContainer.append(button1, button2, button3, buttonAll);
 
 
 
 
-document.addEventListener('DOMContentLoaded', renderCard);
+document.addEventListener('DOMContentLoaded', filterAll);
 
 buttonAll.addEventListener('click', showCard);
 

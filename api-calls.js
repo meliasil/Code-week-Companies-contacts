@@ -3,36 +3,46 @@ export const users = 'https://jsonplaceholder.typicode.com/users';
 
 
 
-
-export const renderCard = () => {
+    export const filterAll = () => {
     
-    fetch (users).then((res) => {
-        return res.json();
-    }).then((users) => {
+        fetch (users).then((res) => {
+            return res.json();
+        }).then((users) => {
         
         users.forEach(items => {
+
             const cardContainer = document.querySelector('.card-container');
             const newCard = document.createElement('div');
             newCard.classList = 'card';
             newCard.style.display = 'none';
 
+
+    
             const companyEl = document.createElement('h2');
             companyEl.className = 'company-El';
-            companyEl.innerHTML = `${items.company.name}`;
+            companyEl.innerHTML = items.company.name;
+            
+
             const catchPhraseEl = document.createElement('h3');
             catchPhraseEl.className = 'catch-Phrase';
-            catchPhraseEl.innerHTML = `«${items.company.catchPhrase}»`;
+            catchPhraseEl.innerHTML = items.company.catchPhrase;
+
+
             const addressEl = document.createElement('p');
-            addressEl.innerHTML = `street: ${items.address.street}, suite: ${items.address.suite}, city: ${items.address.city}`;
+            addressEl.innerHTML = items.company.address;
+
+
             const phoneEl = document.createElement('p');
-            phoneEl.innerHTML = `phone: ${items.phone}`
+            phoneEl.innerHTML = items.company.phone;
 
 
             newCard.append(companyEl, catchPhraseEl, addressEl, phoneEl);
             cardContainer.append(newCard);
-
+    
         })
+        
     })
+        
 }
 
 
@@ -76,12 +86,17 @@ export const filterAE = () => {
             const companiesNames = user.company.name;
             const firstLetter = ['A', 'B', 'C', 'D', 'E'];
             if (startsWithLetter(companiesNames, firstLetter)) {
-                
+
                 console.log(companiesNames);
+
+                /* renderCard(companiesNames) */
+
+
             }
         })
-    }
-)};
+    })
+}
+        
 
 
 
@@ -101,7 +116,8 @@ export const filterFL = () => {
             const firstLetter = ['F', 'G', 'H', 'I', 'J', 'K', 'L'];
             if (startsWithLetter(companiesNames, firstLetter)) {
                 
-                console.log(companiesNames);
+                console.log(companiesNames)
+            /* renderCard(companiesNames) */
             }
         })
     }
@@ -124,32 +140,9 @@ export const filterMZ = () => {
             const firstLetter = ['M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
             if (startsWithLetter(companiesNames, firstLetter)) {
                 
-                console.log(companiesNames);
+                console.log(companiesNames)
+                /* renderCard(companiesNames) */
             }
         })
     }
 )};
-
-
-
-
-
-const formButton = document.getElementById('formButton');
-const contactForm = document.getElementById('contactForm');
-const newContactForm = document.getElementById('newContactForm');
-
-
-export const showFormButton = () => {
-    formButton.addEventListener('click', () => {
-        contactForm.style.display = 'block';
-    })
-}
-
-
-export const submitNewContact = () => {
-    newContactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-    })
-} 
-
